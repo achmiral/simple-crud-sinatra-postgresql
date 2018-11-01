@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: sinatra-crud_development
+  pool: 5
+  host: localhost
+  username: root
+  password: root
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV['DATABASE_HOST'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  pool: 2
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
